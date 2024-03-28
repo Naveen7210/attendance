@@ -57,9 +57,6 @@ class AttendanceController extends Controller
         $idvalue = $request->ids;
         $presentvalue = $request->present;
         $attendancedate = $request->attdate;
-        //$attendancebatch = $request->chbatch;
-
-        //return $attendancebatch;
 
         $checkdate = attendance::get();
 
@@ -70,10 +67,6 @@ class AttendanceController extends Controller
                 $alertmessage = 'You already submitted the attendance';
                 return redirect('/attendance')->with('alertmessage',$alertmessage); 
             }
-            // elseif($checking == $attendancedate){
-            //     $alertmessage = 'You already submitted the attendance for' . " " . $attendancedate;
-            //     return redirect('/attendance')->with('alertmessage',$alertmessage); 
-            // }
         }
 
 
